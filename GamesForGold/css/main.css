@@ -1,0 +1,32 @@
+body {
+	background-color: lightblue;
+}
+
+h1 {
+	color: white;
+}
+
+p {
+	font-family: verdana;
+}
+
+/*This will give additional properties to things in the div container but will not overwrite element properties.*/
+.testclass {
+/*.testclass img { = Every img element nested in testclass div will have the following properties*/
+	font-family: verdana;
+	font-size: 14px;
+	color: purple;
+	animation-name: example;
+	animation-duration: 5s;
+	animation-iteration-count: infinite; /*Loop animation*/
+	
+}
+
+
+
+/*The animation code*/
+@keyframes example {
+	from {color: red;}
+	to {color: green;}
+	/*Then it will set everything back to its defined properties*/
+}
