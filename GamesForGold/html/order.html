@@ -9,6 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <!--All URLS on this page will use this URL as a starting address to find something-->
 <base href="../assets/images/" target="_blank"/> <!--Open links in new window by default-->
+<link rel="stylesheet" type="text/css" href="../../css/main.css">
 </head>
 
 <title> Order page </title>
@@ -19,29 +20,37 @@
 <a href="../../index.html" target="_self"/> Home </a>			<!--Open home in same tab--> 
 </nav>
 
-<body><p> You're almost there to owning 'INSERT GAME HERE'! All we need is a few details before we make your gaming dreams reality. </p>
-<h1> User Details </h1>
-<label> <b> Your name (required) * </b> </label>
-	<form>
-		First name
-		<input type="text" name="firstname"/>
-		Last name
-		<input type="text" name="lastname"/> </br> </br> </br>
-	</form>
+<ul class="order-page">
 
-<label> <b> Address (required) * </b> </label>
-	<form>
-		Street Address
-		<input type="text" name="address"/> </br> </br> 			<!--Break to 2 new line-->
+<body><p> You're almost there to owning 'INSERT GAME HERE'! All we need is a few details before we make your gaming dreams reality. </p>
+
+<h1 class="order-title"> User Details </h1>
+
+<form>
+	<label id="input-gradient" class="input-title"> <b> Full Name <span class="required-ast"> * </span> </b> </label>
+	
+	<div class="input-block">
+		<input type="text" name="firstname"/> 
+		<input type="text" name="lastname"/> </br>
+
+		<label class="input-detail"> First name </label> 
+		<label class="input-detail" style="margin-left:	175px;"> Last name  </label>			<!--Tap into style to modify the margin to align it underneath the right box-->
+	</div>
+	
+</form>
+
+<form>
+	<label id="input-gradient" class="input-title"> <b> Address <span class="required-ast"> * </span> </b> </label>
+	
+	<div class="input-block">
+		<input type="text" name="address"/> </br> 			<!--Break to 1 new line-->
+		<label class="input-detail"> Street Address </label> </br> </br>
 		
-		Street Address Line 2
-		<input type="text" name="address2"/> </br> </br>
-		
-		City
+		<input type="text" name="address2"/> </br>
+		<label class="input-detail"> Street Address Line 2 </label> </br> </br>
+	
 		<input type="text" name="city"/>
-		
-		State / Territory
-		<select> 
+		<select style="margin-left: 50px; "> 
 			<option value=""> Please Select </option>
 			<option value="ACT"> ACT </option>
 			<option value="NSW"> NSW </option>
@@ -51,38 +60,44 @@
 			<option value="Tas"> Tas </option>
 			<option value="Vic"> Vic </option>
 			<option value="WA">  WA  </option>
-		</select>
-		</br> </br>
+		</select> </br>
+		<label class="input-detail"> City </label>
+		<label class="input-detail" style="margin-left:	210px;"> State/Territory </label> </br> </br>
 		
-		Postal / Zip Code
-		<input type="text" name="postcode"/>
-	
-		</br> </br>
-	</form>
-	
-<h1> Order Details </h1>
-	<label> <b> Quantity: </b> </label>
-	<form>
-		<input type="text" name="quantity"/> </br> </br>
-	</form>
+		<input type="text" name="postcode"/> </br>
+		<label class="input-detail"> Postal / Zip Code </label>
+	</div>
+	</br> </br>
+</form>
 
-<div>
-	<img src="game_placeholder2.png"/>
+<h1 class="order-title"> Payment Details </h1>
+<form>
+	<label id="input-gradient" class="input-title"> <b> Credit Card </br> Details <span class="required-ast"> * </span> </b> </label>
+	
+	<div class="input-block">
+		<input type="text" name="ccnum"/> </br>
+		<label class="input-detail"> Credit Card Number </label> </br> </br>
+		
+		<input type="date" name="expdate"/> </br>
+		<label class="input-detail"> Expiry Date </label> 
+	</div>
+</form>
+
+<h1 class="order-title"> Order Details </h1>
+<form>
+	<label id="input-gradient" class="input-title"> <b> Quantity </b> </label>
+	<div class="input-block">
+		<span class="quantity"> 1 </span>
+	</div>
+</form>
+
+<div class="buy-game-desc">
+	<img src="game_placeholder2.png"/> </br> </br>
+	<button type="button">Submit Your <del>Soul</del> Money</button>
 </div>
 
-<h1> Payment Details </h1>
-	<form>
-		Credit Card Number
-		<input type="text" name="ccnum"/> </br> </br>
-		
-		Expiry Date
-		<input type="date" name="expdate"/> </br> </br>
-	</form>
 </body>
 
-<footer>
-<button type="button">Submit Your <del>Soul</del> Money</button>
-</footer>
-
+</ul>
 
 </html>
