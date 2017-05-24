@@ -4,16 +4,21 @@
 
 
 <head>
-<meta charset="UTF-8"/>
+<meta charset="UTF-8">
 <!--Allow elements to scale with viewport (dimensions of device that is browsing)-->
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src = "../js/game-info.js"></script> 	<!--Allow use of functions in javascript file-->
 <!--All URLS on this page will use this URL as a starting address to find something-->
-<base href="../assets/images/" target="_blank"/>
+<base href="../assets/images/" target="_blank">
+<link rel="stylesheet" type="text/css" href="../../css/main.css">
+
+<title> Game List </title>
+
 </head>
 
 <body>
 
-<table>
+<table id="game-list">
 	<tr>
 		<th> Game 		</th>
 		<th> Description</th>
@@ -21,16 +26,112 @@
 		<th> Platform 	</th>
 	</tr>
 	<tr>
-		<td> <a href="../../html/game_page.html" target="iframe_a"/> <img src="game_placeholder.png" alt="Placeholder"/> </a> </td>
-		<td> Bla bla bla bla											</td>
-		<td> 499$ 														</td>
-		<td> Windows Vista											    </td>
+		<td> 
+			<a onclick="storeGameInfo('Dark Souls 1')" href="../../html/game_page.html" target="iframe_a"> <img class="thumb" src="game_covers/Dark%20Souls%201.jpg" alt="Dark Souls 1"> </a> 
+		</td>
+		<td id="desc">
+			Dark Souls is a third-person action role-playing game. 
+			The core mechanic of the game is exploration. Players are encouraged by the game to proceed with caution, learn from past mistakes, or find alternate areas to explore. 
+			Dark Souls takes place in a large and continuous open world environment, connected through a central hub area (Firelink Shrine). 
+			Players are able to travel to and from areas and explore various paths at will, although certain prerequisites have to be met in order to unlock certain areas.
+		</td>
+		<td id="price"> 40$ 														</td>
+		<td id="platform"> PC/X360/PS3											    </td>
 	</tr>
 	<tr>
-		<td> <a href="../../html/game_page.html" target="iframe_a"/> <img src="game_placeholder.png" alt="Placeholder"/> </a> </td>
-		<td> Memes, an epic adventure set in...							</td>
-		<td> 499$ 														</td>
-		<td> Windows Vista											    </td>
+		<td> <a onclick="storeGameInfo('Dark Souls 2')" href="../../html/game_page.html" target="iframe_a"> <img class="thumb" src="game_covers/Dark%20Souls%202.jpg" alt="Dark Souls 2"> </a> </td>
+		<td id="desc">
+			Dark Souls II retains similar mechanics from its predecessors in the Souls series. 
+			Being known for its difficulty, both bosses and standard enemies have the potential to kill the player in only a few hits.
+			Bad play is punished severely by most enemies, opportunities for recovering health are limited, 
+			and as in Demon's Souls, each time upon death, the player's maximum health is reduced (to a certain lower limit) until the player expends a rare item to reverse it. 
+			The game uses a form of joint currency called "souls", which are used as both experience points for leveling up and also as currency for purchasing items from shops. 
+			Upon death, the player's entire collection of souls are dropped; the player can recover their dropped souls by returning to the spot where they died, 
+			but if they die before picking them up, the souls are permanently lost.
+		</td>
+		<td id="price"> 60$ 														</td>
+		<td id="platform"> PC/X360/XONE/PS3/PS4									    </td>
+	</tr>
+	<tr>
+		<td> <a onclick="storeGameInfo('Dark Souls 3')" href="../../html/game_page.html" target="iframe_a"> <img class="thumb" src="game_covers/Dark%20Souls%203.jpg" alt="Dark Souls 3"> </a> </td>
+		<td id="desc">
+			Dark Souls III is an action role-playing game played in a third-person perspective, similar to previous games in the series. 
+			According to lead director and series creator Hidetaka Miyazaki, the game's gameplay design followed "closely from Dark Souls II". 
+			Players are equipped with a variety of weapons to fight against enemies, such as bows, throwable projectiles, and swords. 
+			Shields can act as secondary weapons but they are mainly used to deflect enemies' attacks and protect the player from suffering damage. 
+			Each weapon has two basic types of attacks, one being a standard attack, and the other being slightly more powerful that can be charged up, similar to FromSoftware's previous game, 
+			Bloodborne. In addition, attacks can be evaded through dodge-rolling. Bonfires, which serve as checkpoints, return from previous installments. Ashes, according to Miyazaki, 
+			play an important role in the game. Magic is featured in the game, with a returning magic system from Demon's Souls, now known as "focus points" (FP). 
+			When performing spells, the players' focus points are consumed. There are two separate types of Estus Flasks in the game, which can be allotted to fit a players' particular play style.
+		</td>
+		<td id="price"> 89$ 														</td>
+		<td id="platform"> PC/XONE/PS4									    		</td>
+	</tr>
+	<tr>
+		<td> <a onclick="storeGameInfo('Bloodborne')" href="../../html/game_page.html" target="iframe_a"> <img class="thumb" src="game_covers/Bloodborne.jpg" alt="Bloodborne"> </a> </td>
+		<td id="desc">
+			Bloodborne is played from a third-person perspective and features action role-playing elements similar to those found in the Souls series of games, particularly Demon's Souls and Dark Souls.
+			Players make their way through different locations within the decrepit Gothic world of Yharnam, while battling varied enemies, including bosses,
+			collecting different types of useful items that have many uses, interacting with the strange non-player characters, 
+			opening up shortcuts, and continuing through the main story.
+		</td>
+		<td id="price"> 89$ 														</td>
+		<td id="platform"> PC/XONE/PS4									    		</td>
+	</tr>
+	<tr>
+		<td> <a onclick="storeGameInfo('Madden NFL 17')" href="../../html/game_page.html" target="iframe_a"> <img class="thumb" src="game_covers/Madden%20NFL%2017.jpg" alt="Madden NFL 17"> </a> </td>
+		<td id="desc">
+			Madden NFL 17 has developed a new ground game mechanic that provide players a more balanced experience. 
+			In addition to this, the new defensive AI puts players' teammates into positions to stop the run or pass game. 
+			Features such as Ultimate Team and Franchise mode will make a return, however, many of their features have been revamped and upgraded.
+		</td>
+		<td id="price"> 79$ 														</td>
+		<td id="platform"> X360/XONE/PS3/PS4									    	</td>
+	</tr>
+	<tr>
+		<td> <a onclick="storeGameInfo('Mario Kart 8')" href="../../html/game_page.html" target="iframe_a"> <img class="thumb" src="game_covers/Mario%20Kart%208.jpg" alt="Mario Kart 8"> </a> </td>
+		<td id="desc">
+			The game continues the traditional gameplay of the Mario Kart series, in which characters from the Mario universe race against each other in go-karts, 
+			attempting to hinder their opponents or improve their racing performance using various tools found in item boxes. 
+			In addition, the game includes four different difficulties, which can be selected before beginning the race to challenge players. 
+			Returning features from previous installments include motorbikes, and 12-player racing from Mario Kart Wii, 
+			as well as hang gliders, underwater racing and vehicle customization from Mario Kart 7.
+		</td>
+		<td id="price"> 69$ 														</td>
+		<td id="platform"> WII U									    				</td>
+	</tr>
+	<tr>
+		<td> <a onclick="storeGameInfo('Super Smash Brothers Wii U')" href="../../html/game_page.html" target="iframe_a"> <img class="thumb" src="game_covers/Super%20Smash%20Brothers%20Wii%20U.jpg" alt="Super Smash Brothers Wii U"> </a> </td>
+		<td id="desc">
+			Like in previous games in the series, Super Smash Bros. is a multiplayer fighting game in which the players use various attacks, techniques, 
+			and items to deal damage to their opponents and knock their opponents out of the arena. As a character's damage percentage increases, they fly back further when attacked, 
+			and may eventually be knocked far enough out of the playing field to be knocked out. To assist players during battle, items sometimes appear on the battlefield if turned on, 
+			most of which represent the various video games represented in the series. An item called a Smash Ball allows players to use a powerful, character-specific attack, 
+			otherwise known as the "Final Smash". Another item is an Assist Trophy, which summons various non-playable characters from a represented series onto the field to assist the summoner. 
+		</td>
+		<td id="price"> 69$ 														</td>
+		<td id="platform"> WII U									    				</td>
+	</tr>
+	<tr>
+		<td> <a onclick="storeGameInfo('Star Wars Battlefront 2')" href="../../html/game_page.html" target="iframe_a"> <img class="thumb" src="game_covers/Star%20Wars%20Battlefront%202.jpg" alt="Star Wars Battlefront 2"> </a> </td>
+		<td id="desc">
+			Star Wars Battlefront II is an upcoming action shooter video game based on the Star Wars film franchise under development by EA DICE in collaboration with Criterion Games and Motive Studios,
+			and published by Electronic Arts. It is the fourth major installment of the Star Wars: Battlefront series and seventh overall. 
+			It is also a sequel to the 2015 reboot of the series. Unlike its predecessor, it features a single player campaign, characters and locations from the prequel and sequel trilogies, 
+			and classes in multiplayer. 
+		</td>
+		<td id="price"> 89$ 														</td>
+		<td id="platform"> PC/XONE/PS4									    		</td>
+	</tr>
+	<tr>
+		<td> <a onclick="storeGameInfo('Dead Space 3')" href="../../html/game_page.html" target="iframe_a"> <img class="thumb" src="game_covers/Dead%20Space%203.jpg" alt="Dead Space 3"> </a> </td>
+		<td id="desc">
+			Dead Space 3 puts Clarke against the Necromorphs, who serve as the primary antagonists of the franchise. 
+			The Resource Integration Gear (RIG) suit returns, using holographic displays projected from the players' suit and weapons to display health and ammo count, respectively. 
+			In vacuum areas, a timer will appear on the player's right shoulder, indicating how much oxygen that character has left before they suffocate.
+		</td>
+		<td id="price"> 69$ 														</td>
+		<td id="platform"> PC/X360/PS3									    		</td>
 	</tr>
 </table>
 

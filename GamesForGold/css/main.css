@@ -12,9 +12,163 @@ p {
 }
 */
 
+.thumb {
+	width:					150px;
+	height:					150px;
+}
+
+.cover {
+	width:					300px;
+	height:					300px;
+}
+
+table, th, td {
+	border:					1px solid black;
+	border-collapse:		collapse;
+}
+
+table {
+	border-spacing:			5px;
+}
+
+.info-table {
+	float:					right;
+	position:				relative;
+	right:					50%;
+}
+
+th, td {
+	padding:				15px;
+}
+
+th {
+	text-align:				left;
+}
+
+iframe {
+	background-image:		url(../assets/images/bg_iframe.png);
+}
+
+.index-page {
+	background-image:		url(../assets/images/bg.jpg);
+	background-size:		cover;
+}
+
+a.button {
+	-webkit-appearance:		button;
+	color:					initial;
+	text-decoration:		none;
+}
+
+.nav-container {
+	list-style-type:		none;
+	width:					80%;
+	/*Remove browser default settings*/
+	margin:					0;
+	margin-left:			10%;
+	padding:				0;	
+	
+	border:					1px solid black;
+	border-radius:			0px 0px 20px 20px;
+	
+	overflow:				hidden;
+	background-color:		black;
+	
+	font-family:			helvetica;
+}
+
+.aside-container {	
+	border-bottom:			1px solid #c8ddeb;
+	border-radius:			3px 3px 0px 0px;
+	
+	position:				relative;
+	right:					10px;
+	bottom:					410px;
+	float:					right;
+	
+	display:				block;
+	
+	width:					200px;
+	
+	margin:					0;
+	padding:				0;
+	
+	background-color:		#f2f2f2;
+}
+
+.aside-title {	
+	position:				relative;
+	border-bottom:			1px solid #c8ddeb;
+	border-radius:			3px 3px 0px 0px;
+	
+	background-color:		#333;
+	
+	display:				block;
+	
+	color:					#ddd;
+	text-shadow:			0px 1px 0px #000;
+	font-size:				18px;
+	font-weight:			bold;
+	
+	line-height:			normal;
+}
+
+.aside-list {
+	margin-left:			-40px;
+	position:				static;
+	list-style-type:		square;
+	list-style-position:	inside;
+	
+	border-radius:			0;
+}
+
+.aside-link {
+	margin-left:			10px;
+	margin-top:				5px;
+	margin-bottom:			5px;
+}
+
+/*<a> elements inside a list item*/
+.nav-link {
+	display:				block;			/*Whole link area is clickable and allows resizing of that block with width, margin etc.*/
+	width:					120px;			/*Block element only takes up this width*/
+	padding:				14px 16px;
+	
+	color:					#ded9d5;
+	background-color:		#333;
+	
+	text-align:				center;
+	text-decoration:		none;
+	
+	float:					left;
+	border-right:			1px inset #997a00;		/*Separate links with a right line*/
+}
+
+.nav-link:hover {
+	background-color:		#9a8043;
+}
+
+.header-anim {
+	animation-name:				header-cycle;
+	/*animation-delay:			2s;*/
+	animation-duration:			60s;
+	animation-direction:		alternate;
+	animation-iteration-count:	infinite;
+	animation-timing-function: 	ease-in-out;
+}
+
+@keyframes header-cycle {
+	0%  					{background-image: url(../assets/images/header1.jpg);}
+	25%						{background-image: url(../assets/images/header2.jpg);}
+	50%						{background-image: url(../assets/images/header3.png);}
+	75%						{background-image: url(../assets/images/header4.jpg);}
+	100%					{background-image: url(../assets/images/header1.jpg);}
+}
+
 header {
 	color:					#cda70c;
 	background:				none repeat scroll 0 0 #DDDDDD;
+	background-size:		cover;
 	background-repeat:		no-repeat;
 	background-attachment:	scroll;
 	background-position:	center top;
@@ -22,47 +176,16 @@ header {
 	clear:					both;
 	display:				block;
 	
-	list-style-position:	outside;
-	
 	border-radius:			5px 5px 0px 0px;
 	border-top:				0px;
 	
-	padding:				24px 6px 24px 6px;
+	padding:				100px 18px 100px 0px;
 	
-	margin:					0px 24px 0px 24px;
-	
-	margin-left:			0px;
+	margin:					-10px 0px 0px -10px;
+
 	width:					100%;
 	
 	text-align:				center;
-	font-family:			Coda, sans-serif;
-	font-size:				1.714em;
-	font-weight:			bold;
-}
-
-nav {
-	color:					#cda70c;
-	background:				none repeat scroll 0 0 #DDDDDD;
-	background-repeat:		no-repeat;
-	background-attachment:	scroll;
-	background-position:	center top;
-
-	clear:					both;
-	display:				block;
-	
-	list-style-position:	outside;
-	
-	border-radius:			5px 5px 0px 0px;
-	border-top:				0px;
-	
-	padding:				24px 6px 24px 6px;
-	
-	margin:					0px 24px 0px 24px;
-	
-	margin-left:			25%;
-	width:					50%;
-	
-	text-align:				left;
 	font-family:			Coda, sans-serif;
 	font-size:				1.714em;
 	font-weight:			bold;
@@ -72,7 +195,7 @@ nav {
 	margin-left:		25px;		
 }
 
-form {
+.order-form {
 	padding-top: 			10px;
 	padding-bottom:			10px;
 	padding:				12px 24px;
@@ -142,7 +265,6 @@ input {
 	
 	overflow:				hidden;
 	position:				relative;
-	zoom:					1;
 	clear:					both;
 	
 	font-family:			Coda, sans-serif;
@@ -164,10 +286,6 @@ input {
 	margin-bottom:	3px;
 }
 
-#input-gradient {
-	background:		linear-gradient(#dadada, #bbbbbb);
-}
-
 .input-title {
 	display: 			inline-block;
 	float:	 			left;
@@ -184,6 +302,8 @@ input {
 	background-color:	#dad9d8;
 	
 	font-weight:		bold;
+	
+	background:		linear-gradient(#dadada, #bbbbbb);
 }
 
 

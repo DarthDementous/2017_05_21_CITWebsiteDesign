@@ -10,33 +10,48 @@
 <meta name="description" content="Buy a wide variety of games with the use of a currency that continually rewards the user.">
 <!--Allow elements to scale with viewport (dimensions of device that is browsing)-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base href="assets/images/" target="_blank"> <!--Open links in new window by default-->
+<link rel="stylesheet" type="text/css" href="../../css/main.css">
 
 <title>Games for Gold</title>
 </head>
 
-<body>
-<header>GAMES FOR GOLD</header>
+<body class="index-page">
+<header id="header-anim">GAMES FOR GOLD</header>
 
-<nav>Navigation links here</nav>
+<nav> 
+	<ul class="nav-container">
+		<li> <a class="nav-link" href="../../index.html" target="_self"> Home </a> </li>     <!--Open home in same tab-->
+		<li> <a class="nav-link" href="../../html/game_list.html" target="iframe_a"> Game List </a> </li>
+		<li> <a class="nav-link" href="../../html/welcome.html" target="iframe_a"> About </a> </li>
+	</ul>
+ 
+</nav>
 
-<section>
+<br>
+
 <!--A link with the same target as the name of an iframe will cause that link to be opened in the iframe-->
-<p><a href="html/game_list.html" target="iframe_a">Click here!</p>
-
-
-<iframe src="test.html" height="400" width="1000" name="iframe_a"></iframe>
-</section>
+<iframe src="../../html/welcome.html" height="400" width="1000" name="iframe_a"></iframe>
 
 <aside>
-<ul>
-	<li><a href="html/order.html" target="iframe_a">Order page!</li>
-	<li>Link</li>
-	<li>Link</li>
-	<li>Link</li>
-	<li>Link</li>
-	<li>Link</li>
-</ul>
+	<form class="aside-container">
+		<label class="aside-title"> External Links </label>
+		<ul class="aside-list">
+			<li class="aside-link"> <a href="https://www.google.com">			Google </a> </li>
+			<li class="aside-link"> <a href="https://www.reddit.com">			Reddit </a> </li>
+			<li class="aside-link"> <a href="https://www.rockpapershotgun.com"> Rock-Paper-Shotgun </a> </li>
+		</ul>
+	</form>
 </aside>
+
+<!--Mark of success for passing the .css validator!-->
+<p>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px;margin-top:50px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+    </a>
+</p>
 
 </body>
 
