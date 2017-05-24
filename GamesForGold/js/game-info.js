@@ -39,7 +39,7 @@ function storeGameInfo(game) {
 function modifyTable() {
 	//Change entries of the table with the infoRow variable
 	document.getElementById("price").innerHTML 		= localStorage.getItem("price");
-	//document.getElementById("desc").innerHTML 		= localStorage.getItem("desc");
+	document.getElementById("desc").innerHTML 		= localStorage.getItem("desc");
 	document.getElementById("platform").innerHTML 	= localStorage.getItem("platform");
 	document.getElementById("name").innerHTML		= localStorage.getItem("name");
 	
